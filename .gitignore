@@ -80,3 +80,6 @@ crashlytics-build.properties
 *.suo
 /Project.Hotfix/obj
 /.vs
+
+
+buildAssetBundle/

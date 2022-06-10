@@ -6,7 +6,7 @@ public class HotFix
 
     public static void GameEntry()
     {
-        Debug.Log("HotFixLogic Init");
+        Debug.Log("HotFixLogic Init 123");
 
         HotFixEntry.Start();
     }

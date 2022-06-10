@@ -65,10 +65,12 @@ namespace HuaTuo
                 Debug.LogFormat("compile assemblies:{0}", ass);
             }
 
+            Debug.LogFormat("begin copy");
             foreach (var hotDllName in HuaTuo_BuildProcessor_2020_1_OR_NEWER.s_allHotUpdateDllNames)
             {
                 string dllPath = $"{buildDir}/{hotDllName}";
                 string dllBytesPath = $"{Application.dataPath}/GameMain/HotFixDll/{hotDllName}.bytes";
+                Debug.LogFormat("dllBytesPath:{0}", dllBytesPath);
                 File.Copy(dllPath, dllBytesPath, true);
             }
         }
