@@ -45,34 +45,34 @@ public class RefTypes : MonoBehaviour
     // GameFramework中使用的泛型
     void RefGameFramework()
     {
-        Utility.Text.Format(null, null);
-        Utility.Text.Format(null, null, null);
-        Utility.Text.Format(null, null, null, null);
+        Utility.Text.Format<string>(null, null);
+        Utility.Text.Format<string,string>(null, null, null);
+        Utility.Text.Format<string,string,string>(null, null, null, null);
 
         Log.Debug(null);
-        Log.Debug(null, null);
-        Log.Debug(null, null, null);
-        Log.Debug(null, null, null, null);
+        Log.Debug<string>(null, null);
+        Log.Debug<string,string>(null, null, null);
+        Log.Debug<string,string,string>(null, null, null, null);
 
         Log.Info(null);
-        Log.Info(null, null);
-        Log.Info(null, null, null);
-        Log.Info(null, null, null, null);
+        Log.Info<string>(null, null);
+        Log.Info<string,string>(null, null, null);
+        Log.Info<string,string,string>(null, null, null, null);
 
         Log.Warning(null);
-        Log.Warning(null, null);
-        Log.Warning(null, null, null);
-        Log.Warning(null, null, null, null);
+        Log.Warning<string>(null, null);
+        Log.Warning<string,string>(null, null, null);
+        Log.Warning<string,string,string>(null, null, null, null);
 
         Log.Error(null);
-        Log.Error(null, null);
-        Log.Error(null, null, null);
-        Log.Error(null, null, null, null);
+        Log.Error<string>(null, null);
+        Log.Error<string,string>(null, null, null);
+        Log.Error<string,string,string>(null, null, null, null);
 
         Log.Fatal(null);
-        Log.Fatal(null, null);
-        Log.Fatal(null, null, null);
-        Log.Fatal(null, null, null, null);
+        Log.Fatal<string>(null, null);
+        Log.Fatal<string,string>(null, null, null);
+        Log.Fatal<string,string,string>(null, null, null, null);
         // GameEntry.Localization.GetString(null);
         // GameEntry.Localization.GetString<string>(null, null);
         // GameEntry.Localization.GetString<string, string>(null, null, null);
