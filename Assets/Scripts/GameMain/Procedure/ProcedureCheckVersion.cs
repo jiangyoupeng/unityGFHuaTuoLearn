@@ -112,22 +112,24 @@ namespace GameMain
 
             Log.Info("Latest game version is '{0} ({1})', local game version is '{2} ({3})'.", m_VersionInfo.LatestGameVersion, m_VersionInfo.InternalGameVersion.ToString(), Version.GameVersion, Version.InternalGameVersion.ToString());
 
-            if (m_VersionInfo.ForceUpdateGame)
-            {
-                // 需要强制更新游戏应用
-                GameEntry.UI.OpenDialog(new DialogParams
-                {
-                    Mode = 2,
-                    Title = GameEntry.Localization.GetString("ForceUpdate.Title"),
-                    Message = GameEntry.Localization.GetString("ForceUpdate.Message"),
-                    ConfirmText = GameEntry.Localization.GetString("ForceUpdate.UpdateButton"),
-                    OnClickConfirm = GotoUpdateApp,
-                    CancelText = GameEntry.Localization.GetString("ForceUpdate.QuitButton"),
-                    OnClickCancel = delegate (object userData) { UnityGameFramework.Runtime.GameEntry.Shutdown(ShutdownType.Quit); },
-                });
+            // for test
+            // 强制更新跳转app的代码
+            //if (m_VersionInfo.ForceUpdateGame)
+            //{
+            //    // 需要强制更新游戏应用
+            //    GameEntry.UI.OpenDialog(new DialogParams
+            //    {
+            //        Mode = 2,
+            //        Title = GameEntry.Localization.GetString("ForceUpdate.Title"),
+            //        Message = GameEntry.Localization.GetString("ForceUpdate.Message"),
+            //        ConfirmText = GameEntry.Localization.GetString("ForceUpdate.UpdateButton"),
+            //        OnClickConfirm = GotoUpdateApp,
+            //        CancelText = GameEntry.Localization.GetString("ForceUpdate.QuitButton"),
+            //        OnClickCancel = delegate (object userData) { UnityGameFramework.Runtime.GameEntry.Shutdown(ShutdownType.Quit); },
+            //    });
 
-                return;
-            }
+            //    return;
+            //}
 
             // 设置资源更新下载地址
             GameEntry.Resource.UpdatePrefixUri = Utility.Path.GetRegularPath(m_VersionInfo.UpdatePrefixUri);
